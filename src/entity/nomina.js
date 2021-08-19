@@ -60,7 +60,7 @@ export const NominaList = (props) => (
   <List {...props} filters={Filters} sort={{ field: "Fecha", order: "DESC" }}>
     <Datagrid rowClick="show" >
       <TextField source="id" />
-      <DateField source="Fecha" />
+      <DateField locales="es-UY" options={{ timeZone: 'UTC' }} source="Fecha" />
       <TextField source="Periodo" />
       <ReferenceField
         label="Tipo de Nómina"
@@ -78,7 +78,7 @@ export const NominaList = (props) => (
 const AsideInfo = (props) => (
   <SimpleShowLayout {...props}>
     <Typography variant="h6">Nómina</Typography>
-    <DateField source="Fecha" />
+    <DateField locales="es-UY" options={{ timeZone: 'UTC' }} source="Fecha" />
     <TextField source="Periodo" />
     <ReferenceField
       label="Tipo de Nómina"

@@ -46,7 +46,7 @@ export const AsientoContableList = (props) => (
   <List {...props} filters={Filters} sort={{ field: "Fecha", order: "DESC" }}>
     <Datagrid rowClick="show" >
       <TextField label="id" source="ContabilidadID" />
-      <DateField source="Fecha" />
+      <DateField locales="es-UY" options={{ timeZone: 'UTC' }} source="Fecha" />
       <TextField label="Descripción" source="Descripcion" />
       <NumberField source="Auxiliar" />
       <ReferenceField
@@ -93,7 +93,7 @@ export const AsientoContableShow = (props) => {
           <RaBox flex="1 1 20%" className={classes.detailsBox}>
             <RaBox display="flex" justifyContent="space-between">
               <TextField label="id" source="ContabilidadID" />
-              <DateField source="Fecha" />
+              <DateField locales="es-UY" options={{ timeZone: 'UTC' }} source="Fecha" />
             </RaBox>
             <RaBox display="flex" justifyContent="space-between">
               <TextField label="Descripción" source="Descripcion" />

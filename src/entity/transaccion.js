@@ -106,7 +106,7 @@ export const TransaccionList = (props) => (
       <ReferenceField label="Empleado" source="EmpleadoID" reference="Empleado">
         <TextField source="Nombre" />
       </ReferenceField>
-      <DateField source="Fecha" />
+      <DateField locales="es-UY" options={{ timeZone: 'UTC' }} source="Fecha" />
       <TextField source="Tipo" />
       <ReferenceField
         label="Tipo de Ingreso"

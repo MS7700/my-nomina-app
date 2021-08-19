@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@blackbox-vision/ra-language-spanish": "^3.16.2",
-    "@ms7700/ra-data-odata-server-forked": "^2.2.3",
+    "@ms7700/ra-data-odata-server-forked": "^2.2.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
