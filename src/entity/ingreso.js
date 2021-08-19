@@ -17,10 +17,13 @@ const Validations = (values) => {
   if (!values.Nombre) {
     errors.Nombre = "El nombre es requerido.";
   }
-  if (!values.Cantidad) {
+  if(values.Porcentual && !values.Automatico){
+    errors.Porcentual = "Debe activar automático.";
+  }
+  if (!values.Cantidad && values.Automatico) {
     errors.Cantidad = "La cantidad es requerida.";
   }
-  if (values.Cantidad <= 0) {
+  if (values.Cantidad <= 0 && values.Automatico) {
     errors.Cantidad = "La cantidad debe ser mayor que cero.";
   }
   return errors;
